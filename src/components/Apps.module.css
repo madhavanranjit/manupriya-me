@@ -1,0 +1,145 @@
+.apps {
+  padding: 96px 48px;
+  background: var(--cream);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 40px;
+}
+
+.card {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 0.5px solid var(--border);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.08);
+}
+
+.cardHeader {
+  padding: 32px 28px 24px;
+}
+
+.header_maatri {
+  background: linear-gradient(135deg, #DDE9E4, #C8DDD0);
+}
+
+.header_defe {
+  background: linear-gradient(135deg, #EDD9CE, #F5D9CA);
+}
+
+.appLogo {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.appLogo i {
+  font-size: 28px;
+  color: #fff;
+}
+
+.logo_maatri { background: var(--sage-deep); }
+.logo_defe   { background: var(--dusty-rose); }
+
+.appName {
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--charcoal);
+}
+
+.appTagline {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 4px;
+  font-style: italic;
+}
+
+.cardBody {
+  background: #fff;
+  padding: 24px 28px 28px;
+}
+
+.appDesc {
+  font-size: 13.5px;
+  line-height: 1.8;
+  color: #5A5450;
+  margin-bottom: 20px;
+}
+
+.features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.features li {
+  font-size: 13px;
+  color: var(--charcoal);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.5;
+}
+
+.features li i {
+  font-size: 15px;
+  color: var(--sage);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.pill {
+  display: inline-block;
+  font-size: 11px;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.pillSage { background: #DDE9E4; color: var(--sage-deep); }
+.pillRose { background: var(--rose-light); color: #8B4A35; }
+
+.storeLink {
+  font-size: 12.5px;
+  color: var(--sage-deep);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: gap 0.2s;
+}
+
+.storeLink:hover {
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .apps { padding: 64px 24px; }
+  .grid { grid-template-columns: 1fr; }
+}

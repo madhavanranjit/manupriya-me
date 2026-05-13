@@ -1,0 +1,91 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --cream: #FAF8F4;
+  --sage: #7A9E87;
+  --sage-light: #C8DDD0;
+  --sage-deep: #3E6B51;
+  --dusty-rose: #C4886F;
+  --rose-light: #EDD9CE;
+  --warm-brown: #5C3D2E;
+  --charcoal: #2D2D2D;
+  --muted: #7A7068;
+  --border: #E0D8CE;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'DM Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--sans);
+  background: var(--cream);
+  color: var(--charcoal);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--sans);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Scroll reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Utility */
+.section-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dusty-rose);
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: var(--serif);
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--charcoal);
+  margin-bottom: 24px;
+}
+
+.section-title em {
+  color: var(--sage-deep);
+  font-style: italic;
+}
+
+/* Responsive base */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 28px;
+  }
+}

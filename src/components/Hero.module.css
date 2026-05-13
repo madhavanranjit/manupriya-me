@@ -1,0 +1,234 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  padding-top: 60px;
+}
+
+.left {
+  padding: 80px 56px 80px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dusty-rose);
+  font-weight: 500;
+  margin-bottom: 20px;
+  animation: fadeUp 0.8s ease both;
+}
+
+.name {
+  font-family: var(--serif);
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 1.05;
+  color: var(--charcoal);
+  margin-bottom: 16px;
+  animation: fadeUp 0.8s ease 0.1s both;
+}
+
+.name em {
+  color: var(--sage-deep);
+  font-style: italic;
+}
+
+.subtitle {
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 400;
+  color: var(--muted);
+  margin-bottom: 24px;
+  line-height: 1.5;
+  font-style: italic;
+  animation: fadeUp 0.8s ease 0.2s both;
+}
+
+.desc {
+  font-size: 15px;
+  line-height: 1.85;
+  color: #5A5450;
+  max-width: 440px;
+  margin-bottom: 32px;
+  animation: fadeUp 0.8s ease 0.3s both;
+}
+
+.tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+  animation: fadeUp 0.8s ease 0.4s both;
+}
+
+.tag {
+  font-size: 11.5px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+
+.tagSage { background: #DDE9E4; color: var(--sage-deep); }
+.tagRose { background: var(--rose-light); color: #8B4A35; }
+.tagWarm { background: #EDE5DB; color: var(--warm-brown); }
+
+.btns {
+  display: flex;
+  gap: 14px;
+  animation: fadeUp 0.8s ease 0.5s both;
+}
+
+.btnPrimary {
+  background: var(--sage-deep);
+  color: #fff;
+  padding: 14px 32px;
+  font-size: 12.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 2px;
+  font-weight: 500;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btnPrimary:hover {
+  background: #2e5040;
+  transform: translateY(-2px);
+}
+
+.btnOutline {
+  background: transparent;
+  color: var(--sage-deep);
+  padding: 14px 32px;
+  font-size: 12.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid var(--sage);
+  border-radius: 2px;
+  font-weight: 500;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.btnOutline:hover {
+  background: #DDE9E4;
+  transform: translateY(-2px);
+}
+
+/* RIGHT — photo */
+.right {
+  position: relative;
+  background: #E5EDE7;
+  overflow: hidden;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(229,237,231,0.15) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.badge1 {
+  position: absolute;
+  bottom: 32px;
+  left: 28px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 14px 20px;
+  z-index: 2;
+  border: 0.5px solid var(--border);
+  animation: fadeUp 1s ease 0.6s both;
+}
+
+.badgeNum {
+  font-family: var(--serif);
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--sage-deep);
+  line-height: 1;
+}
+
+.badgeLabel {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.badge2 {
+  position: absolute;
+  top: 32px;
+  right: 28px;
+  background: rgba(255,255,255,0.92);
+  border-radius: 10px;
+  padding: 12px 18px;
+  z-index: 2;
+  border: 0.5px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  backdrop-filter: blur(8px);
+  animation: fadeUp 1s ease 0.7s both;
+}
+
+.badge2Dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--dusty-rose);
+  flex-shrink: 0;
+}
+
+.badge2Text {
+  font-size: 13px;
+  color: var(--charcoal);
+  font-weight: 500;
+}
+
+.badge2Sub {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .left {
+    padding: 100px 24px 48px;
+  }
+
+  .name {
+    font-size: 48px;
+  }
+
+  .right {
+    height: 480px;
+  }
+}
+
+@media (max-width: 480px) {
+  .name { font-size: 38px; }
+  .btns { flex-direction: column; }
+  .btnPrimary, .btnOutline { text-align: center; }
+}
