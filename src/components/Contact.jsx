@@ -1,9 +1,11 @@
 import { useState, useRef, useEffect } from 'react'
 import styles from './Contact.module.css'
 
+const FORMSPREE_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT
+
 export default function Contact() {
   const [form, setForm] = useState({ name: '', phone: '', email: '', reason: '', message: '' })
-  const [submitted, setSubmitted] = useState(false)
+  const [status, setStatus] = useState('idle') // idle | submitting | success | error
   const ref = useRef()
 
   useEffect(() => {
@@ -19,10 +21,23 @@ export default function Contact() {
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value })
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // TODO: wire to Formspree / EmailJS / Supabase
-    setSubmitted(true)
+    setStatus('submitting')
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(form),
+      })
+      if (res.ok) {
+        setStatus('success')
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
   }
 
   return (
@@ -49,14 +64,14 @@ export default function Contact() {
         </div>
 
         <div className={`${styles.right} reveal`} style={{ transitionDelay: '0.15s' }}>
-          {submitted ? (
+          {status === 'success' ? (
             <div className={styles.successMsg}>
               <i className="ti ti-circle-check" aria-hidden="true" />
               <h3>Message received!</h3>
               <p>Thank you for reaching out. I'll get back to you shortly.</p>
             </div>
           ) : (
-            <div className={styles.form} onSubmit={handleSubmit}>
+            <form className={styles.form} onSubmit={handleSubmit}>
               <div className={styles.formRow}>
                 <input
                   className={styles.input}
@@ -106,10 +121,13 @@ export default function Contact() {
                 onChange={handleChange}
                 style={{ resize: 'none' }}
               />
-              <button className={styles.submitBtn} type="button" onClick={handleSubmit}>
-                Send Message
+              {status === 'error' && (
+                <p className={styles.errorMsg}>Something went wrong. Please try again.</p>
+              )}
+              <button className={styles.submitBtn} type="submit" disabled={status === 'submitting'}>
+                {status === 'submitting' ? 'Sending…' : 'Send Message'}
               </button>
-            </div>
+            </form>
           )}
         </div>
       </div>
