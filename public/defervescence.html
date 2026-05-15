@@ -112,8 +112,8 @@
 
   /* VIDEO */
   .vsec{background:var(--orange-pale);border-radius:24px;padding:3.5rem;text-align:center}
-  .vbox{border-radius:14px;aspect-ratio:16/9;max-width:700px;margin:1.8rem auto 0;overflow:hidden;position:relative}
-  .vbox iframe{position:absolute;inset:0;width:100%;height:100%;border:none}
+  .vbox{border-radius:14px;aspect-ratio:16/9;max-width:700px;margin:1.8rem auto 0;overflow:hidden;position:relative;background:#000}
+  .vbox video{position:absolute;inset:0;width:100%;height:100%}
 
   /* TIMELINE */
   .tl{display:flex;flex-direction:column;max-width:620px}
@@ -305,7 +305,9 @@
     <h2>Watch the demo</h2>
     <p style="color:var(--ink-soft);font-size:.95rem">A walkthrough of Defervescence — from fever logging to trend analysis and clinical export.</p>
     <div class="vbox">
-      <iframe src="https://www.youtube.com/embed/jsC1_6riVL8" title="Defervescence demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <video controls playsinline>
+        <source src="https://www.dropbox.com/scl/fi/jfqchna0vdqtuhb0omfv8/My-Movie.mp4?rlkey=6oi8d2ii3kom5kt4wa4jpwo5v&raw=1" type="video/mp4">
+      </video>
     </div>
   </div>
 </section></div>
