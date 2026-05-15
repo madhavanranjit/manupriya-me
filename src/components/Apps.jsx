@@ -33,7 +33,7 @@ const apps = [
     pill: 'Play Store',
     pillClass: 'pillRose',
     storeLink: 'https://play.google.com',
-    pageLink: '/defervescence.html',
+    pageLink: '/defervescence',
   },
 ]
 

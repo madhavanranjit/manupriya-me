@@ -36,7 +36,8 @@
   gap: 32px;
 }
 
-.links button {
+.links button,
+.links .navLink {
   background: none;
   border: none;
   font-size: 12px;
@@ -46,9 +47,12 @@
   font-weight: 500;
   transition: color 0.2s;
   padding: 4px 0;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.links button:hover {
+.links button:hover,
+.links .navLink:hover {
   color: var(--sage-deep);
 }
 

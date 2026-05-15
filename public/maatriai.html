@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MaatriAI Solutions – Pragmatic AI for Real-World Healthcare</title>
+<meta name="description" content="MaatriAI Solutions Pvt Ltd – Building affordable, open-source AI tools for maternal and child health in India's low-resource settings.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --orange:#E8652A;
+  --orange-deep:#C04A18;
+  --orange-pale:#FDF0EA;
+  --orange-mid:#F2845A;
+  --ink:#1C1612;
+  --ink-soft:#4A3F38;
+  --ink-muted:#8A7E78;
+  --border:rgba(28,22,18,0.09);
+  --bg:#FDFAF7;
+  --white:#fff;
+  --serif:'Fraunces',Georgia,serif;
+  --sans:'DM Sans',system-ui,sans-serif;
+  --r:16px;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2.5rem;background:rgba(253,250,247,0.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nav-logo-mark{width:34px;height:34px;background:var(--orange);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.nav-logo-mark svg{width:19px;height:19px;fill:#fff}
+.nav-logo-text{display:flex;flex-direction:column;line-height:1.1}
+.nav-logo-name{font-family:var(--serif);font-size:1rem;color:var(--ink);font-weight:400;letter-spacing:-.01em}
+.nav-logo-tag{font-size:.6rem;color:var(--ink-muted);letter-spacing:.04em}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{color:var(--ink-soft);text-decoration:none;font-size:.875rem;transition:color .2s}
+.nav-links a:hover{color:var(--orange)}
+.nav-cta{background:var(--orange)!important;color:#fff!important;padding:.45rem 1.2rem;border-radius:100px;font-size:.8rem!important;font-weight:500!important;transition:background .2s!important}
+.nav-cta:hover{background:var(--orange-deep)!important}
+
+.wrap{max-width:1140px;margin:0 auto;padding:0 2rem}
+
+.hero{min-height:100vh;display:flex;align-items:center;padding:8rem 0 5rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;right:-200px;top:50%;transform:translateY(-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(232,101,42,.06) 0%,transparent 65%);border-radius:50%;pointer-events:none}
+.hero-inner{max-width:700px}
+.hero-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:1.5rem;flex-wrap:wrap}
+.co-badge{font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);background:rgba(28,22,18,.05);padding:.3rem .9rem;border-radius:100px;border:1px solid var(--border)}
+.cin{font-size:.65rem;color:var(--ink-muted);font-family:monospace}
+h1{font-family:var(--serif);font-size:clamp(2.8rem,5vw,4.2rem);line-height:1.05;font-weight:300;letter-spacing:-.025em;margin-bottom:1.4rem}
+h1 strong{font-weight:400;color:var(--orange)}
+.hero-sub{font-size:1.05rem;color:var(--ink-soft);font-weight:300;line-height:1.75;max-width:560px;margin-bottom:2.2rem}
+.hero-actions{display:flex;gap:.85rem;flex-wrap:wrap}
+.btn-p{display:inline-flex;align-items:center;gap:7px;background:var(--orange);color:#fff;padding:.8rem 1.7rem;border-radius:100px;font-size:.9rem;font-weight:500;text-decoration:none;border:none;cursor:pointer;transition:background .2s,transform .15s;font-family:var(--sans)}
+.btn-p:hover{background:var(--orange-deep);transform:translateY(-1px)}
+.btn-s{display:inline-flex;align-items:center;gap:7px;background:transparent;color:var(--orange-deep);padding:.8rem 1.7rem;border-radius:100px;font-size:.9rem;font-weight:500;text-decoration:none;border:1.5px solid var(--orange);transition:background .2s,transform .15s}
+.btn-s:hover{background:var(--orange-pale);transform:translateY(-1px)}
+
+.mission{background:#F5EDE5;padding:4.5rem 0}
+.mission-inner{display:grid;grid-template-columns:1fr 2fr;gap:4rem;align-items:start}
+.mission-label{font-size:.7rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--orange-deep);margin-bottom:.8rem}
+.mission-head{font-family:var(--serif);font-size:clamp(1.5rem,2.2vw,2rem);color:var(--ink);font-weight:300;line-height:1.25;letter-spacing:-.015em}
+.mission-body{font-size:.93rem;color:var(--ink-soft);line-height:1.78;font-weight:300;margin-bottom:1.75rem}
+.mission-stats{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+.mstat{border-top:1px solid rgba(28,22,18,.1);padding-top:1rem}
+.mstat-n{font-family:var(--serif);font-size:1.9rem;color:var(--orange-deep);font-weight:300;line-height:1}
+.mstat-l{font-size:.76rem;color:var(--ink-muted);margin-top:.3rem;line-height:1.45}
+
+.slabel{font-size:.7rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--orange);margin-bottom:.7rem}
+h2{font-family:var(--serif);font-size:clamp(1.9rem,3vw,2.6rem);font-weight:300;line-height:1.15;margin-bottom:.9rem;letter-spacing:-.02em}
+.ssub{font-size:1rem;color:var(--ink-soft);font-weight:300;max-width:540px;margin-bottom:3rem;line-height:1.72}
+
+.products{display:flex;flex-direction:column;gap:1.5rem}
+.pcard{background:var(--white);border:1px solid var(--border);border-radius:20px;padding:2.2rem;display:grid;grid-template-columns:auto 1fr auto;gap:0 2rem;align-items:start;transition:box-shadow .2s}
+.pcard:hover{box-shadow:0 8px 32px rgba(0,0,0,.07)}
+.pcard-icon{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.pcard-icon img{width:56px;height:56px;border-radius:14px;object-fit:cover}
+.pcard-icon.maatri{background:#1A6B4A}
+.pcard-icon.glyco{background:#2D5FA6}
+.pcard-icon svg{width:28px;height:28px;fill:#fff}
+.pcard-name{font-family:var(--serif);font-size:1.35rem;font-weight:400;margin-bottom:.2rem;letter-spacing:-.01em}
+.pcard-tagline{font-size:.8rem;color:var(--ink-muted);margin-bottom:.75rem}
+.pcard-desc{font-size:.9rem;color:var(--ink-soft);line-height:1.68;max-width:580px}
+.pcard-tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.9rem}
+.tag{font-size:.68rem;padding:3px 11px;border-radius:100px;font-weight:500;border:1px solid}
+.tag.orange{background:var(--orange-pale);color:var(--orange-deep);border-color:rgba(232,101,42,.2)}
+.tag.green{background:#EAF5F0;color:#0F6E45;border-color:rgba(15,110,69,.2)}
+.tag.blue{background:#EAF1FB;color:#1A4A8A;border-color:rgba(26,74,138,.2)}
+.tag.gray{background:#F0EDE8;color:#6B5E58;border-color:rgba(107,94,88,.2)}
+.pcard-status{display:flex;flex-direction:column;align-items:flex-end;gap:.6rem;flex-shrink:0}
+.status-pill{font-size:.68rem;font-weight:500;padding:.3rem .85rem;border-radius:100px;white-space:nowrap}
+.status-pill.dev{background:#FEF3DA;color:#7A5000}
+.status-pill.concept{background:#F0EDE8;color:#6B5E58}
+.pcard-link{font-size:.78rem;color:var(--orange);text-decoration:none;display:flex;align-items:center;gap:4px;font-weight:500}
+.pcard-link:hover{color:var(--orange-deep)}
+
+.iot{background:var(--orange-pale);border-radius:22px;padding:3rem;margin-top:1.5rem;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center}
+.iot h3{font-family:var(--serif);font-size:1.5rem;font-weight:300;margin-bottom:.5rem;letter-spacing:-.01em}
+.iot p{font-size:.88rem;color:var(--ink-soft);line-height:1.68;max-width:500px}
+.iot-devices{display:flex;flex-direction:column;gap:.6rem;flex-shrink:0}
+.iot-device{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:.65rem 1rem;display:flex;align-items:center;gap:.6rem;font-size:.78rem;font-weight:500;color:var(--ink-soft)}
+.iot-device svg{width:16px;height:16px;stroke:var(--orange-deep);fill:none;stroke-width:1.8;flex-shrink:0}
+
+.team-single{max-width:400px}
+.tcard{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:1.6rem}
+.tcard-av{width:52px;height:52px;border-radius:50%;background:var(--orange-pale);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:1.1rem;color:var(--orange-deep);font-weight:400;margin-bottom:1rem}
+.tcard h3{font-size:1rem;font-weight:500;margin-bottom:.15rem}
+.tcard-role{font-size:.78rem;color:var(--orange-deep);font-weight:500;margin-bottom:.4rem}
+.tcard-inst{font-size:.75rem;color:var(--ink-muted);margin-bottom:.7rem}
+.tcard p{font-size:.83rem;color:var(--ink-soft);line-height:1.6}
+
+.contact-strip{background:#F5EDE5;border-radius:22px;padding:3.5rem;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center;margin-bottom:5rem}
+.contact-strip h3{font-family:var(--serif);font-size:2rem;font-weight:300;color:var(--ink);margin-bottom:.5rem;letter-spacing:-.015em}
+.contact-strip p{font-size:.9rem;color:var(--ink-soft);max-width:460px;line-height:1.7}
+.contact-details{display:flex;flex-direction:column;gap:.75rem;flex-shrink:0}
+.cdet{display:flex;align-items:center;gap:.6rem;font-size:.82rem;color:var(--ink-soft)}
+.cdet svg{width:15px;height:15px;stroke:var(--orange-deep);fill:none;stroke-width:1.8;flex-shrink:0}
+.cdet a{color:var(--ink-soft);text-decoration:none}
+.cdet a:hover{color:var(--orange)}
+
+.footer-inner{max-width:1140px;margin:0 auto;padding:2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;border-top:1px solid var(--border)}
+.flogo{display:flex;align-items:center;gap:8px}
+.flogo-mark{width:26px;height:26px;background:var(--orange);border-radius:6px;display:flex;align-items:center;justify-content:center}
+.flogo-mark svg{width:14px;height:14px;fill:#fff}
+.flogo-text{font-family:var(--serif);font-size:.9rem;color:var(--ink);font-weight:300}
+.flinks{display:flex;gap:1.8rem}
+.flinks a{font-size:.78rem;color:var(--ink-muted);text-decoration:none}
+.flinks a:hover{color:var(--orange)}
+.fcopy{font-size:.72rem;color:var(--ink-muted)}
+.fcin{font-size:.65rem;color:var(--ink-muted);font-family:monospace}
+
+@media(max-width:768px){
+  nav{padding:1rem 1.25rem}
+  .nav-links{display:none}
+  .mission-inner{grid-template-columns:1fr}
+  .pcard{grid-template-columns:auto 1fr;grid-template-rows:auto auto}
+  .pcard-status{flex-direction:row;align-items:center;grid-column:1/-1}
+  .iot{grid-template-columns:1fr}
+  .contact-strip{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <div class="nav-logo-mark">
+      <svg viewBox="0 0 24 24"><path d="M12 2C8 2 4 5 4 9c0 5.5 8 13 8 13s8-7.5 8-13c0-4-4-7-8-7zm0 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
+    </div>
+    <div class="nav-logo-text">
+      <span class="nav-logo-name">MaatriAI Solutions</span>
+      <span class="nav-logo-tag">Pragmatic AI for real-world healthcare</span>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="#products">Products</a>
+    <a href="#team">Team</a>
+    <a href="#contact">Contact</a>
+    <a href="https://manupriya.me" target="_blank">Manupriya.me</a>
+    <a href="mailto:manupriya789@gmail.com" class="nav-cta">Get in Touch</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="wrap">
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <span class="co-badge">MaatriAI Solutions Pvt Ltd</span>
+      <span class="cin">CIN: U62099MP2026PTC084161</span>
+    </div>
+    <h1>Pragmatic AI for<br><strong>real-world healthcare.</strong></h1>
+    <p class="hero-sub">We build affordable, open-source AI tools for maternal and child health — designed for India's low-resource settings, frontline workers, and the billion patients who need them most.</p>
+    <div class="hero-actions">
+      <a href="#products" class="btn-p">Our Products</a>
+      <a href="#contact" class="btn-s">Get in Touch</a>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- MISSION -->
+<div class="mission">
+<div class="wrap">
+  <div class="mission-inner">
+    <div>
+      <p class="mission-label">Why we exist</p>
+      <h2 class="mission-head">AI that works where it's needed most.</h2>
+    </div>
+    <div>
+      <p class="mission-body">Most health AI is built for well-resourced hospitals with clean data and stable connectivity. India's reality is different. We build tools that work with photos of paper records, intermittent internet, and overworked frontline workers — at the lowest possible cost to the health system.</p>
+      <div class="mission-stats">
+        <div class="mstat"><div class="mstat-n">3</div><div class="mstat-l">AI products across maternal and child health</div></div>
+        <div class="mstat"><div class="mstat-n">Low cost</div><div class="mstat-l">Designed to minimise API and infrastructure costs at scale</div></div>
+        <div class="mstat"><div class="mstat-n">NHM</div><div class="mstat-l">Aligned with India's national health mission workflows</div></div>
+        <div class="mstat"><div class="mstat-n">Open</div><div class="mstat-l">Source commitment across all products</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- PRODUCTS -->
+<div class="wrap"><section id="products" style="padding:5rem 0">
+  <p class="slabel">Our products</p>
+  <h2>Tools built for the last mile.</h2>
+  <p class="ssub">Each product addresses a specific, unmet clinical need in low-resource Indian healthcare — pragmatic, affordable, and designed to scale.</p>
+
+  <div class="products">
+
+    <div class="pcard">
+      <div class="pcard-icon">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 56'%3E%3Crect width='56' height='56' rx='14' fill='%23E8652A'/%3E%3Cpath d='M28 14c-4 0-8 3-8 7 0 5.5 8 13 8 13s8-7.5 8-13c0-4-4-7-8-7zm0 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4z' fill='%23fff'/%3E%3C/svg%3E" alt="Defervescence">
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-name">Defervescence</div>
+        <div class="pcard-tagline">Smart fever tracker · Climate-driven outbreak detection</div>
+        <div class="pcard-desc">An AI-assisted mobile app that helps caregivers monitor and interpret fever in children — and aggregates anonymous, geo-tagged data to detect climate-driven infectious disease outbreaks before they reach hospital systems. Designed for ASHAs and community health workers with offline capability.</div>
+        <div class="pcard-tags">
+          <span class="tag orange">Android app</span>
+          <span class="tag orange">React · Capacitor · Supabase</span>
+          <span class="tag gray">Usability trial ongoing</span>
+        </div>
+      </div>
+      <div class="pcard-status">
+        <span class="status-pill dev">Launching June 2026</span>
+        <a href="/defervescence" class="pcard-link">View product page →</a>
+      </div>
+    </div>
+
+    <div class="pcard">
+      <div class="pcard-icon maatri">
+        <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0 1 12 2.944a11.955 11.955 0 0 1-8.618 3.04A12.02 12.02 0 0 0 3 9c0 5.591 3.824 10.29 9 11.622C17.176 19.29 21 14.591 21 9c0-1.042-.133-2.052-.382-3.016z"/></svg>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-name">MaatriAI</div>
+        <div class="pcard-tagline">Antenatal record interpretation · High-risk pregnancy identification</div>
+        <div class="pcard-desc">An AI tool that reads photographs of paper antenatal records — blood reports, urine tests, ultrasounds, doctors' notes — and generates colour-coded summaries for patients and CHOs. Flags missing investigations, highlights abnormal parameters, calculates risk for eclampsia and GDM, and delivers audio guidance in local languages. No manual data entry. Built for ASHA workers under NHM/RMNCH+A workflows.</div>
+        <div class="pcard-tags">
+          <span class="tag green">Fetal medicine</span>
+          <span class="tag green">NHM aligned</span>
+          <span class="tag blue">Computer vision · LLM</span>
+          <span class="tag gray">In development</span>
+        </div>
+      </div>
+      <div class="pcard-status">
+        <span class="status-pill concept">In development</span>
+      </div>
+    </div>
+
+    <div class="pcard">
+      <div class="pcard-icon glyco">
+        <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7zm0 4a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>
+      </div>
+      <div class="pcard-body">
+        <div class="pcard-name">Glyco</div>
+        <div class="pcard-tagline">Voice-based glucose monitoring · Home screen widget</div>
+        <div class="pcard-desc">A voice-first glucose logging app with a home screen widget for quick, frictionless recording — designed for diabetic patients who need to log readings multiple times daily without unlocking their phone. Roadmap includes an IoT glucometer that pushes readings directly to the app, eliminating manual entry entirely.</div>
+        <div class="pcard-tags">
+          <span class="tag blue">Voice AI</span>
+          <span class="tag blue">Android widget</span>
+          <span class="tag gray">IoT roadmap</span>
+          <span class="tag gray">In development</span>
+        </div>
+      </div>
+      <div class="pcard-status">
+        <span class="status-pill concept">In development</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="iot">
+    <div>
+      <p class="slabel" style="color:var(--orange-deep)">Hardware roadmap</p>
+      <h3>From software to sensors.</h3>
+      <p>Our long-term vision is to close the loop between AI and data collection — building low-cost IoT devices that feed directly into Defervescence and Glyco, eliminating manual entry and enabling passive, continuous monitoring in community health settings.</p>
+    </div>
+    <div class="iot-devices">
+      <div class="iot-device">
+        <svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="4"/></svg>
+        IoT thermometer → Defervescence
+      </div>
+      <div class="iot-device">
+        <svg viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
+        IoT glucometer → Glyco
+      </div>
+      <div class="iot-device">
+        <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        Passive vitals monitoring
+      </div>
+    </div>
+  </div>
+
+</section></div>
+
+<!-- TEAM -->
+<div style="background:var(--orange-pale);padding:5rem 0">
+<div class="wrap" id="team">
+  <p class="slabel">The team</p>
+  <h2>Clinician. Builder. Founder.</h2>
+  <p class="ssub">Founded by a specialist physician combining deep clinical expertise with hands-on AI development.</p>
+  <div class="team-single">
+    <div class="tcard">
+      <div class="tcard-av">M</div>
+      <h3>Dr. Manupriya</h3>
+      <div class="tcard-role">Founder &amp; CEO</div>
+      <div class="tcard-inst">Senior Fetal Medicine Specialist · Apollo Sage Hospital, Bhopal</div>
+      <p>Leading expert in fetal medicine with hands-on experience building AI-based clinical tools. Drives product vision, clinical validation, and the MaatriAI antenatal intelligence platform.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- CONTACT -->
+<div class="wrap" style="padding-top:5rem" id="contact">
+  <div class="contact-strip">
+    <div>
+      <h3>Let's build together.</h3>
+      <p>We welcome collaborations with public health institutions, funding partners, clinical researchers, and technology contributors. If you're working on healthcare access in emerging markets, we'd like to hear from you.</p>
+    </div>
+    <div class="contact-details">
+      <div class="cdet">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <a href="mailto:manupriya789@gmail.com">manupriya789@gmail.com</a>
+      </div>
+      <div class="cdet">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8 2 4 5 4 9c0 5.5 8 13 8 13s8-7.5 8-13c0-4-4-7-8-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        Bhopal, Madhya Pradesh, India
+      </div>
+      <div class="cdet">
+        <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        <a href="https://manupriya.me" target="_blank">manupriya.me</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="flogo">
+      <div class="flogo-mark"><svg viewBox="0 0 24 24"><path d="M12 2C8 2 4 5 4 9c0 5.5 8 13 8 13s8-7.5 8-13c0-4-4-7-8-7zm0 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg></div>
+      <span class="flogo-text">MaatriAI Solutions Pvt Ltd</span>
+    </div>
+    <div class="flinks">
+      <a href="#products">Products</a>
+      <a href="https://manupriya.me" target="_blank">Manupriya.me</a>
+      <a href="mailto:manupriya789@gmail.com">Contact</a>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:.2rem">
+      <span class="fcopy">© 2026 MaatriAI Solutions Private Limited</span>
+      <span class="fcin">CIN: U62099MP2026PTC084161</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
