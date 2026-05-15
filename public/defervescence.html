@@ -112,13 +112,8 @@
 
   /* VIDEO */
   .vsec{background:var(--orange-pale);border-radius:24px;padding:3.5rem;text-align:center}
-  .vbox{background:var(--orange-deep);border-radius:14px;aspect-ratio:16/9;max-width:700px;margin:1.8rem auto 0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;gap:.9rem;cursor:pointer;overflow:hidden;position:relative}
-  .vbox::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(240,110,50,.5) 0%,transparent 60%)}
-  .playbtn{width:62px;height:62px;border-radius:50%;background:rgba(255,255,255,.15);border:2px solid rgba(255,255,255,.4);display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s;position:relative;z-index:1}
-  .playbtn:hover{background:rgba(255,255,255,.25);transform:scale(1.08)}
-  .playbtn svg{width:22px;height:22px;fill:#fff;margin-left:3px}
-  .vlbl{font-size:.85rem;opacity:.8;position:relative;z-index:1;font-family:var(--sans)}
-  .vcmg{font-size:.72rem;opacity:.5;position:relative;z-index:1}
+  .vbox{border-radius:14px;aspect-ratio:16/9;max-width:700px;margin:1.8rem auto 0;overflow:hidden;position:relative}
+  .vbox iframe{position:absolute;inset:0;width:100%;height:100%;border:none}
 
   /* TIMELINE */
   .tl{display:flex;flex-direction:column;max-width:620px}
@@ -309,10 +304,8 @@
     <p class="slabel" style="color:var(--orange-deep)">See it in action</p>
     <h2>Watch the demo</h2>
     <p style="color:var(--ink-soft);font-size:.95rem">A walkthrough of Defervescence — from fever logging to trend analysis and clinical export.</p>
-    <div class="vbox" id="videoPH">
-      <div class="playbtn"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-      <div class="vlbl">Demo video</div>
-      <div class="vcmg">Upload in progress — subscribe for updates</div>
+    <div class="vbox">
+      <iframe src="https://www.youtube.com/embed/jsC1_6riVL8" title="Defervescence demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
   </div>
 </section></div>
