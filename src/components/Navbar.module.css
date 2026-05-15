@@ -52,6 +52,24 @@
   color: var(--sage-deep);
 }
 
+.defeLink {
+  font-size: 12px;
+  color: #fff;
+  background: var(--dusty-rose);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 2px;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.defeLink:hover {
+  background: #b5745c;
+  transform: translateY(-1px);
+}
+
 .cta {
   background: var(--sage-deep);
   color: #fff;

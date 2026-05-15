@@ -27,6 +27,7 @@ export default function Navbar() {
         <button onClick={() => scrollTo('expertise')}>Expertise</button>
         <button onClick={() => scrollTo('apps')}>Apps</button>
         <button onClick={() => scrollTo('contact')}>Contact</button>
+        <a href="/defervescence.html" className={styles.defeLink}>Defervescence</a>
       </div>
 
       <button className={styles.cta} onClick={() => scrollTo('contact')}>

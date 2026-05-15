@@ -33,6 +33,7 @@ const apps = [
     pill: 'Play Store',
     pillClass: 'pillRose',
     storeLink: 'https://play.google.com',
+    pageLink: '/defervescence.html',
   },
 ]
 
@@ -83,7 +84,12 @@ export default function Apps() {
                   <span className={`${styles.pill} ${styles[app.pillClass]}`}>
                     {app.pill}
                   </span>
-                  {app.storeLink && (
+                  {app.pageLink && (
+                    <a href={app.pageLink} className={styles.storeLink}>
+                      Learn more <i className="ti ti-arrow-right" aria-hidden="true" />
+                    </a>
+                  )}
+                  {app.storeLink && !app.pageLink && (
                     <a href={app.storeLink} target="_blank" rel="noopener noreferrer" className={styles.storeLink}>
                       Download <i className="ti ti-arrow-right" aria-hidden="true" />
                     </a>
