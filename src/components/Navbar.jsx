@@ -25,7 +25,7 @@ export default function Navbar() {
       <div className={`${styles.links} ${menuOpen ? styles.open : ''}`}>
         <button onClick={() => scrollTo('about')}>About</button>
         <button onClick={() => scrollTo('expertise')}>Expertise</button>
-        <button onClick={() => scrollTo('apps')}>Apps</button>
+        <button onClick={() => scrollTo('apps')}>MaatriAI</button>
         <button onClick={() => scrollTo('contact')}>Contact</button>
       </div>
 
