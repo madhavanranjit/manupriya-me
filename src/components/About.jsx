@@ -4,7 +4,7 @@ import styles from './About.module.css'
 const stats = [
   { num: '5000+', label: 'Families guided through high-risk pregnancies' },
   { num: '2', label: 'AI health apps in active development' },
-  { num: 'AIIMS', label: 'Trained at premier national institute' },
+  { num: 'SGPGIMS', label: 'Trained at premier national institute, Lucknow' },
   { num: 'Apollo', label: 'Senior Specialist, Apollo Sage Bhopal' },
 ]
 

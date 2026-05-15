@@ -27,12 +27,16 @@ export default function Navbar() {
         <button onClick={() => scrollTo('expertise')}>Expertise</button>
         <button onClick={() => scrollTo('apps')}>Apps</button>
         <button onClick={() => scrollTo('contact')}>Contact</button>
-        <a href="/defervescence.html" className={styles.defeLink}>Defervescence</a>
       </div>
 
-      <button className={styles.cta} onClick={() => scrollTo('contact')}>
+      <a
+        href="https://www.apollohospitals.com/doctors/obstetrician-and-gynecologist/bhopal/dr-manupriya-madhavan?utm_campaign=rightchoice-google-reserve&utm_source=google-reserve&utm_medium=1931525415121178175&rwg_token=AFd1xnGVp8-AHEpiFSNvALoCsn8M7kbYC1CfBxUHip0uq4DpAtZjQLIi_fCKBS1lMZKfRL8hzBRBU9p8zfO9rZMf2MeGN7h6jA%3D%3D"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.cta}
+      >
         Book Consultation
-      </button>
+      </a>
 
       <button className={styles.hamburger} onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
         <i className={menuOpen ? 'ti ti-x' : 'ti ti-menu-2'}></i>
