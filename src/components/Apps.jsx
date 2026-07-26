@@ -12,7 +12,7 @@ const apps = [
       'Maternal health tracking through pregnancy & postpartum',
       'Newborn milestone monitoring with AI insights',
       "Women's empowerment through health education",
-      'Expert-backed guidance from Dr. Manupriya',
+      'Expert-backed guidance from Dr. Manupriya Madhavan',
     ],
     pill: 'Coming Soon',
     pillClass: 'pillSage',

@@ -13,7 +13,7 @@ export default function Hero() {
           Fetal Medicine Specialist · Health Tech Innovator · Mother
         </p>
         <h1 className={styles.name}>
-          Dr. <em>Manupriya</em>
+          Dr. <em>Manupriya Madhavan</em>
         </h1>
         <p className={styles.subtitle}>
           Where clinical excellence meets the warmth of a mother's heart
@@ -41,7 +41,7 @@ export default function Hero() {
       <div className={styles.right}>
         <img
           src={heroPhoto}
-          alt="Dr. Manupriya, Fetal Medicine Specialist at Apollo Sage Hospital Bhopal"
+          alt="Dr. Manupriya Madhavan, Fetal Medicine Specialist at Apollo Sage Hospital Bhopal"
           className={styles.photo}
         />
         <div className={styles.overlay} />
