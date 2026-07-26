@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.inner}>
         <div className={styles.logo}>manupriya<span>.me</span></div>
-        <p className={styles.copy}>© 2025 Dr. Manupriya · Apollo Sage Hospital, Bhopal</p>
+        <p className={styles.copy}>© 2026 Dr. Manupriya · Apollo Sage Hospital, Bhopal</p>
         <div className={styles.links}>
           <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
             <i className="ti ti-brand-linkedin" aria-hidden="true" /> LinkedIn
