@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patient Information | Dr. Manupriya Madhavan</title>
+<meta name="description" content="A simple guide to pregnancy scans, blood tests and procedures in fetal medicine — in English and Hindi — by Dr. Manupriya Madhavan, Fetal Medicine Specialist, Apollo Sage Hospital, Bhopal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Noto+Sans+Devanagari:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --cream:#FAF8F4;
+  --sage:#7A9E87;
+  --sage-light:#C8DDD0;
+  --sage-pale:#EAF1EC;
+  --sage-deep:#3E6B51;
+  --dusty-rose:#C4886F;
+  --rose-light:#EDD9CE;
+  --rose-pale:#F7EDE6;
+  --warm-brown:#5C3D2E;
+  --charcoal:#2D2D2D;
+  --muted:#7A7068;
+  --border:#E0D8CE;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'DM Sans',system-ui,sans-serif;
+  --deva:'Noto Sans Devanagari','DM Sans',sans-serif;
+}
+
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--cream);color:var(--charcoal);font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+
+/* ---------- NAV ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px 40px;background:rgba(250,248,244,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:var(--serif);font-size:22px;font-weight:600;color:var(--charcoal);letter-spacing:-.01em}
+.nav-logo span{color:var(--sage-deep)}
+.nav-right{display:flex;align-items:center;gap:26px}
+.nav-back{font-size:13px;color:var(--muted);transition:color .2s;display:inline-flex;align-items:center;gap:6px}
+.nav-back:hover{color:var(--sage-deep)}
+.nav-cta{background:var(--sage-deep);color:#fff;font-size:12px;font-weight:500;padding:10px 22px;border-radius:100px;transition:background .2s,transform .15s}
+.nav-cta:hover{background:#2e5040;transform:translateY(-1px)}
+
+/* ---------- HEADER ---------- */
+.header{max-width:820px;margin:0 auto;padding:150px 24px 40px;text-align:center}
+.eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--dusty-rose);font-weight:500;margin-bottom:16px}
+.header h1{font-family:var(--serif);font-size:clamp(38px,6vw,58px);font-weight:500;line-height:1.1;letter-spacing:-.01em;margin-bottom:18px}
+.header h1 em{color:var(--sage-deep);font-style:italic}
+.header .lede{font-size:17px;color:var(--muted);max-width:600px;margin:0 auto;line-height:1.7}
+
+/* ---------- LAYOUT ---------- */
+.wrap{max-width:820px;margin:0 auto;padding:0 24px}
+.section{padding:40px 0}
+.section-head{margin-bottom:28px}
+.section-head .slabel{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--sage);font-weight:500;margin-bottom:10px}
+.section-head h2{font-family:var(--serif);font-size:clamp(28px,4vw,38px);font-weight:500;line-height:1.2;letter-spacing:-.01em}
+.section-head h2 em{color:var(--sage-deep);font-style:italic}
+.section-intro{font-size:15.5px;color:var(--muted);line-height:1.72;margin-top:14px;max-width:640px}
+
+/* ---------- NOTE BOX (before your scan) ---------- */
+.note{background:var(--sage-pale);border:1px solid var(--sage-light);border-radius:18px;padding:32px 34px;margin-top:8px}
+.note-tag{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--sage-deep);font-weight:600;margin-bottom:14px}
+.note-tag svg{width:16px;height:16px;stroke:var(--sage-deep);fill:none;stroke-width:1.7}
+.note h3{font-family:var(--serif);font-size:26px;font-weight:600;margin-bottom:14px;color:var(--charcoal)}
+.note p{font-size:15.5px;color:var(--warm-brown);line-height:1.72;margin-bottom:12px}
+.note .hi{font-family:var(--deva);font-size:15px;color:var(--sage-deep);line-height:1.9;border-top:1px dashed var(--sage-light);padding-top:14px;margin-top:4px}
+
+/* ---------- CARDS ---------- */
+.cards{display:flex;flex-direction:column;gap:16px}
+.card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:26px 28px;transition:box-shadow .25s,transform .2s}
+.card:hover{box-shadow:0 10px 34px rgba(62,107,81,.08);transform:translateY(-2px)}
+.card-top{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.card-num{font-family:var(--serif);font-size:20px;font-weight:600;color:var(--sage-light);line-height:1;flex-shrink:0}
+.card h3{font-family:var(--serif);font-size:23px;font-weight:600;letter-spacing:-.01em;line-height:1.2}
+.card-en{font-size:15.5px;color:var(--warm-brown);line-height:1.72}
+.card-hi{font-family:var(--deva);font-size:14.5px;color:var(--sage-deep);line-height:1.95;border-top:1px dashed var(--border);padding-top:14px;margin-top:14px}
+
+/* type tag on blood tests / procedures */
+.type-tag{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;padding:4px 11px;border-radius:100px;white-space:nowrap;align-self:center}
+.type-tag.screen{background:var(--sage-pale);color:var(--sage-deep);border:1px solid var(--sage-light)}
+.type-tag.diagnostic{background:var(--rose-pale);color:var(--dusty-rose);border:1px solid var(--rose-light)}
+.type-tag.procedure{background:#F1EEE9;color:var(--warm-brown);border:1px solid var(--border)}
+
+/* the "if positive" connective card */
+.card.step{background:var(--rose-pale);border-color:var(--rose-light)}
+
+/* ---------- RESOURCES ---------- */
+.resources{background:#fff;border:1px solid var(--border);border-radius:20px;padding:40px 34px;text-align:center;margin-top:8px}
+.resources h2{font-family:var(--serif);font-size:30px;font-weight:500;margin-bottom:10px}
+.resources p{font-size:15px;color:var(--muted);max-width:460px;margin:0 auto 26px;line-height:1.68}
+.res-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.res-btn{display:inline-flex;align-items:center;gap:9px;font-size:14px;font-weight:500;padding:13px 26px;border-radius:100px;transition:transform .15s,background .2s,box-shadow .2s}
+.res-btn svg{width:18px;height:18px;flex-shrink:0}
+.res-yt{background:var(--sage-deep);color:#fff}
+.res-yt:hover{background:#2e5040;transform:translateY(-1px)}
+.res-yt svg{fill:#fff}
+.res-gr{background:#fff;color:var(--sage-deep);border:1.5px solid var(--sage)}
+.res-gr:hover{background:var(--sage-pale);transform:translateY(-1px)}
+.res-gr svg{fill:var(--sage-deep)}
+
+/* ---------- CLOSING NOTE ---------- */
+.closing{text-align:center;padding:44px 24px 10px;max-width:640px;margin:0 auto}
+.closing p{font-size:15px;color:var(--muted);line-height:1.72}
+.closing .hi{font-family:var(--deva);font-size:14px;color:var(--sage-deep);line-height:1.9;margin-top:10px}
+
+/* ---------- FOOTER ---------- */
+footer{border-top:1px solid var(--border);margin-top:48px;padding:32px 40px;text-align:center}
+footer .flogo{font-family:var(--serif);font-size:19px;font-weight:600;margin-bottom:8px}
+footer .flogo span{color:var(--sage-deep)}
+footer .fcopy{font-size:12.5px;color:var(--muted)}
+footer .fback{display:inline-block;margin-top:14px;font-size:13px;color:var(--sage-deep);border-bottom:1px solid transparent;transition:border-color .2s}
+footer .fback:hover{border-color:var(--sage)}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:640px){
+  nav{padding:14px 20px}
+  .nav-back{display:none}
+  .header{padding:120px 20px 30px}
+  .note{padding:26px 22px}
+  .card{padding:22px 22px}
+  .resources{padding:32px 22px}
+  footer{padding:28px 20px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;scroll-behavior:auto!important}
+}
+
+/* focus visibility */
+a:focus-visible,.res-btn:focus-visible{outline:2px solid var(--sage-deep);outline-offset:3px;border-radius:6px}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">manupriya<span>.me</span></a>
+  <div class="nav-right">
+    <a href="/" class="nav-back">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back to home
+    </a>
+    <a href="https://www.apollohospitals.com/doctors/obstetrician-and-gynecologist/bhopal/dr-manupriya-madhavan?utm_campaign=rightchoice-google-reserve&utm_source=google-reserve&utm_medium=1931525415121178175&rwg_token=AFd1xnGVp8-AHEpiFSNvALoCsn8M7kbYC1CfBxUHip0uq4DpAtZjQLIi_fCKBS1lMZKfRL8hzBRBU9p8zfO9rZMf2MeGN7h6jA%3D%3D" target="_blank" rel="noopener noreferrer" class="nav-cta">Book Consultation</a>
+  </div>
+</nav>
+
+<header class="header">
+  <p class="eyebrow">Patient Information</p>
+  <h1>Understanding your <em>pregnancy scans</em> &amp; tests</h1>
+  <p class="lede">A simple, honest guide to the scans, blood tests and procedures you may hear about during your pregnancy — explained gently, in English and Hindi.</p>
+</header>
+
+<div class="wrap">
+
+  <!-- BEFORE YOUR SCAN -->
+  <section class="section">
+    <div class="note">
+      <span class="note-tag">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        Before your scan
+      </span>
+      <h3>A few things to know before you come</h3>
+      <p>You do not need to come on an empty stomach. Please eat and drink normally before your appointment. Some scans — particularly the NT/NB scan and the Anomaly scan — can take longer, as we examine your baby carefully and in detail. You're welcome to bring your lunch or a snack along, so you stay comfortable while you wait.</p>
+      <p class="hi">आपको खाली पेट आने की ज़रूरत नहीं है। अपनी जाँच से पहले सामान्य रूप से खाना-पीना कर के आएँ। कुछ जाँचें — खासकर NT/NB स्कैन और एनॉमली स्कैन — में समय लग सकता है, क्योंकि हम आपके शिशु की बारीकी से जाँच करते हैं। आप अपने साथ खाना या नाश्ता ला सकती हैं, ताकि इंतज़ार के दौरान आप आराम से रहें।</p>
+    </div>
+  </section>
+
+  <!-- SCANS -->
+  <section class="section">
+    <div class="section-head">
+      <p class="slabel">Ultrasound Scans</p>
+      <h2>Scans through your <em>pregnancy</em></h2>
+      <p class="section-intro">Each scan looks at something different, at the right time in your pregnancy. Here's what each one is for.</p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-top"><span class="card-num">1</span><h3>Early Pregnancy Scan</h3></div>
+        <p class="card-en">Usually done in the first few weeks, this scan confirms that the pregnancy is developing in the right place, checks for your baby's heartbeat, and helps date your pregnancy accurately. It also tells us whether you're expecting one baby or more.</p>
+        <p class="card-hi">यह स्कैन आमतौर पर गर्भावस्था के शुरुआती हफ़्तों में किया जाता है। इससे पता चलता है कि गर्भ सही जगह पर बढ़ रहा है, शिशु के दिल की धड़कन की जाँच होती है, और गर्भावस्था की सही तारीख़ का अंदाज़ा लगता है। यह भी पता चलता है कि एक शिशु है या एक से ज़्यादा।</p>
+      </div>
+
+      <div class="card">
+        <div class="card-top"><span class="card-num">2</span><h3>NT/NB Scan</h3></div>
+        <p class="card-en">Performed between 11 and 13 weeks 6 days — when your baby measures between 45 mm and 84 mm in length — this first-trimester screening measures a small area of fluid at the back of your baby's neck (nuchal translucency) and looks at the nasal bone. Together with your blood test, it helps assess the chance of certain chromosomal conditions early on. This scan can take some time, as the measurements need to be precise.</p>
+        <p class="card-hi">यह जाँच 11 से 13 सप्ताह 6 दिन के बीच की जाती है — जब शिशु की लंबाई 45 मिमी से 84 मिमी के बीच होती है। इसमें शिशु की गर्दन के पीछे मौजूद तरल की एक छोटी परत को मापा जाता है और नाक की हड्डी को देखा जाता है। खून की जाँच के साथ मिलकर यह शुरुआती चरण में कुछ क्रोमोसोमल स्थितियों की संभावना का अंदाज़ा लगाने में मदद करती है। सटीक माप के कारण इस स्कैन में थोड़ा समय लग सकता है।</p>
+      </div>
+
+      <div class="card">
+        <div class="card-top"><span class="card-num">3</span><h3>Anomaly Scan</h3></div>
+        <p class="card-en">Done around 18 to 22 weeks, this is a detailed head-to-toe check of your baby's anatomy — the brain, heart, spine, face, limbs, and internal organs. It's one of the most thorough scans of your pregnancy, so it may take a while.</p>
+        <p class="card-hi">यह स्कैन लगभग 18 से 22 सप्ताह के बीच किया जाता है। इसमें शिशु के शरीर की सिर से पैर तक विस्तार से जाँच होती है — मस्तिष्क, हृदय, रीढ़, चेहरा, हाथ-पैर और अंदरूनी अंग। यह गर्भावस्था की सबसे विस्तृत जाँचों में से एक है, इसलिए इसमें कुछ समय लग सकता है।</p>
+      </div>
+
+      <div class="card">
+        <div class="card-top"><span class="card-num">4</span><h3>Growth Scan</h3></div>
+        <p class="card-en">Later in pregnancy, this scan measures your baby's size — including the long bones, such as the thigh bone — estimates weight, and checks the amount of fluid around your baby and how the placenta is working. It reassures us that your baby is growing well.</p>
+        <p class="card-hi">गर्भावस्था के बाद के चरण में यह स्कैन शिशु के आकार को मापता है — जिसमें लंबी हड्डियाँ, जैसे जांघ की हड्डी, शामिल हैं — वज़न का अनुमान लगाता है, और शिशु के आसपास के तरल की मात्रा तथा प्लेसेंटा (गर्भनाल) के काम की जाँच करता है। इससे यह भरोसा मिलता है कि शिशु अच्छी तरह बढ़ रहा है।</p>
+      </div>
+
+      <div class="card">
+        <div class="card-top"><span class="card-num">5</span><h3>Doppler Scans</h3></div>
+        <p class="card-en">These assess the blood flow through the umbilical cord, the blood flow to your baby's brain, and the blood supply to the uterus. They tell us how well your baby is receiving oxygen and nutrients, and are especially helpful in monitoring higher-risk pregnancies.</p>
+        <p class="card-hi">ये जाँचें गर्भनाल में रक्त प्रवाह, शिशु के मस्तिष्क तक रक्त प्रवाह, और गर्भाशय तक रक्त आपूर्ति का आकलन करती हैं। इनसे पता चलता है कि शिशु को ऑक्सीजन और पोषण कितनी अच्छी तरह मिल रहा है। ये ख़ासकर अधिक जोखिम वाली गर्भावस्थाओं की निगरानी में मददगार होती हैं।</p>
+      </div>
+
+      <div class="card">
+        <div class="card-top"><span class="card-num">6</span><h3>Fetal Echo</h3></div>
+        <p class="card-en">A specialised, detailed look at your baby's heart — its structure, rhythm, and how it's functioning. It's often recommended when a closer evaluation of the heart is helpful.</p>
+        <p class="card-hi">यह शिशु के हृदय की एक विशेष, विस्तृत जाँच है — इसकी बनावट, धड़कन की लय, और यह कैसे काम कर रहा है। जब हृदय की और गहराई से जाँच ज़रूरी हो, तब यह जाँच की सलाह दी जाती है।</p>
+      </div>
+
+      <div class="card">
+        <div class="card-top"><span class="card-num">7</span><h3>Fetal Neurosonogram</h3></div>
+        <p class="card-en">A dedicated, in-depth scan of your baby's brain and developing nervous system, giving a far more detailed view than a routine scan.</p>
+        <p class="card-hi">यह शिशु के मस्तिष्क और विकसित हो रहे तंत्रिका तंत्र की एक विशेष, गहन जाँच है, जो सामान्य स्कैन की तुलना में कहीं अधिक विस्तृत जानकारी देती है।</p>
+      </div>
+
+      <div class="card">
+        <div class="card-top"><span class="card-num">8</span><h3>IUGR Monitoring</h3></div>
+        <p class="card-en">Sometimes a baby grows more slowly than expected (intrauterine growth restriction). If that's the case, we monitor closely with regular growth and Doppler scans to keep a careful eye on your baby's wellbeing, and to help decide the safest timing and plan for your care.</p>
+        <p class="card-hi">कभी-कभी शिशु उम्मीद से धीमी गति से बढ़ता है। ऐसी स्थिति में हम नियमित ग्रोथ और डॉपलर स्कैन के ज़रिए बारीकी से निगरानी करते हैं, ताकि शिशु की सेहत पर ध्यान रखा जा सके और आपकी देखभाल के लिए सबसे सुरक्षित समय और योजना तय की जा सके।</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BLOOD TESTS -->
+  <section class="section">
+    <div class="section-head">
+      <p class="slabel">Blood Tests</p>
+      <h2>Important blood tests in <em>pregnancy</em></h2>
+      <p class="section-intro">Some of these are <strong>screening</strong> tests — they tell us the <em>chance</em> of a condition, but cannot confirm it. Others are <strong>diagnostic</strong> tests — they give a definite answer. Screening comes first; if it shows a higher chance, a diagnostic test can confirm.</p>
+      <p class="card-hi" style="max-width:640px;border-top:none;padding-top:0;margin-top:12px">गर्भावस्था में कुछ खून की जाँचें "स्क्रीनिंग" होती हैं — ये किसी स्थिति की केवल संभावना बताती हैं, पुष्टि नहीं करतीं। कुछ जाँचें "डायग्नॉस्टिक" होती हैं — ये निश्चित उत्तर देती हैं। पहले स्क्रीनिंग की जाती है; अगर संभावना अधिक दिखे, तो डायग्नॉस्टिक जाँच से पुष्टि की जाती है।</p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-top"><h3>Double Marker Test</h3><span class="type-tag screen">Screening</span></div>
+        <p class="card-en">A first-trimester blood test, usually done alongside the NT/NB scan between 11 and 13 weeks 6 days. Combined with the scan, it helps assess the chance of Down syndrome and certain other chromosomal conditions. Because it's time-sensitive, it should not be missed in the first trimester.</p>
+        <p class="card-hi">यह पहली तिमाही की खून की जाँच है, जो आमतौर पर NT/NB स्कैन के साथ 11 से 13 सप्ताह 6 दिन के बीच की जाती है। स्कैन के साथ मिलकर यह डाउन सिंड्रोम और कुछ अन्य क्रोमोसोमल स्थितियों की संभावना का आकलन करने में मदद करती है। समय पर निर्भर होने के कारण इसे पहली तिमाही में छूटने नहीं देना चाहिए।</p>
+      </div>
+
+      <div class="card">
+        <div class="card-top"><h3>Quadruple Marker Test</h3><span class="type-tag screen">Screening</span></div>
+        <p class="card-en">If the double marker test is missed, the quadruple marker is a second-trimester blood test done between 14 and 20 weeks. It screens for Down syndrome and neural tube defects.</p>
+        <p class="card-hi">अगर डबल मार्कर जाँच छूट जाए, तो क्वाड्रपल मार्कर दूसरी तिमाही की खून की जाँच है, जो 14 से 20 सप्ताह के बीच की जाती है। यह डाउन सिंड्रोम और न्यूरल ट्यूब दोष की जाँच करती है।</p>
+      </div>
+
+      <div class="card step">
+        <div class="card-top"><h3>If a screening test is positive</h3></div>
+        <p class="card-en">A "positive" or high-chance result does not mean your baby has the condition — it means we recommend a more definite test. The next step is either NIPT (a highly accurate blood test) or a diagnostic test such as amniocentesis.</p>
+        <p class="card-hi">"पॉज़िटिव" या अधिक-संभावना वाला परिणाम इसका मतलब नहीं है कि शिशु को वह स्थिति है — इसका मतलब है कि हम एक अधिक निश्चित जाँच की सलाह देते हैं। अगला चरण या तो NIPT (एक बहुत सटीक खून की जाँच) होता है, या एम्नियोसेंटेसिस जैसी डायग्नॉस्टिक जाँच।</p>
+      </div>
+
+      <div class="card">
+        <div class="card-top"><h3>NIPT</h3><span class="type-tag screen">Advanced Screening</span></div>
+        <p class="card-en">A blood test that analyses your baby's DNA in the mother's blood. It is highly sensitive — detecting over 99% of Down syndrome cases — and carries no risk to the pregnancy. It is a screening test, so a positive result is still confirmed with a diagnostic test.</p>
+        <p class="card-hi">यह खून की जाँच माँ के रक्त में मौजूद शिशु के DNA का विश्लेषण करती है। यह बहुत संवेदनशील है — डाउन सिंड्रोम के 99% से अधिक मामलों की पहचान करती है — और गर्भावस्था के लिए कोई जोखिम नहीं रखती। यह एक स्क्रीनिंग जाँच है, इसलिए पॉज़िटिव परिणाम की पुष्टि डायग्नॉस्टिक जाँच से की जाती है।</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROCEDURES -->
+  <section class="section">
+    <div class="section-head">
+      <p class="slabel">Procedures</p>
+      <h2>Specialised &amp; diagnostic <em>procedures</em></h2>
+      <p class="section-intro">These are more detailed procedures that give a definite answer, or help manage specific situations. Each is always discussed with you fully beforehand.</p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-top"><h3>Amniocentesis</h3><span class="type-tag diagnostic">Diagnostic</span></div>
+        <p class="card-en">A small sample of the fluid around your baby is taken with a fine needle, usually after 15 weeks, and tested to confirm chromosomal conditions with near-certainty. It carries a very small risk, which your doctor will discuss with you.</p>
+        <p class="card-hi">इसमें एक पतली सुई से शिशु के आसपास के तरल का एक छोटा नमूना लिया जाता है, आमतौर पर 15 सप्ताह के बाद, और क्रोमोसोमल स्थितियों की लगभग निश्चित पुष्टि के लिए जाँचा जाता है। इसमें बहुत थोड़ा जोखिम होता है, जिसके बारे में आपके डॉक्टर आपसे चर्चा करेंगे।</p>
+      </div>
+
+      <div class="card">
+        <div class="card-top"><h3>Chorionic Villus Sampling (CVS)</h3><span class="type-tag diagnostic">Diagnostic</span></div>
+        <p class="card-en">A small sample of placental tissue is taken and tested. It can be done earlier than amniocentesis, usually between 11 and 14 weeks, and also gives a definite diagnosis. It carries a similarly small risk.</p>
+        <p class="card-hi">इसमें प्लेसेंटा (गर्भनाल) के ऊतक का एक छोटा नमूना लेकर जाँचा जाता है। यह एम्नियोसेंटेसिस से पहले की जा सकती है, आमतौर पर 11 से 14 सप्ताह के बीच, और यह भी निश्चित निदान देती है। इसमें भी उतना ही थोड़ा जोखिम होता है।</p>
+      </div>
+
+      <div class="card">
+        <div class="card-top"><h3>Multifetal Pregnancy Reduction</h3><span class="type-tag procedure">Procedure</span></div>
+        <p class="card-en">In pregnancies with three or more babies, the risks — including early (preterm) birth and complications for both mother and babies — are significantly higher. In some situations, a procedure may be discussed that reduces the number of fetuses, usually to twins or a single baby, to improve the chances of a safer, healthier pregnancy. It is typically performed in the first trimester. This is always a carefully considered, personal decision, made together with your doctor after detailed counselling and with full support at every step.</p>
+        <p class="card-hi">जिन गर्भधारणों में तीन या अधिक शिशु होते हैं, उनमें जोखिम — जैसे समय से पहले प्रसव और माँ व शिशुओं के लिए जटिलताएँ — काफ़ी अधिक होते हैं। कुछ परिस्थितियों में एक प्रक्रिया पर चर्चा की जा सकती है, जिसमें शिशुओं की संख्या कम की जाती है, आमतौर पर जुड़वाँ या एक शिशु तक, ताकि एक सुरक्षित और स्वस्थ गर्भावस्था की संभावना बढ़ सके। यह आमतौर पर पहली तिमाही में की जाती है। यह हमेशा एक सोच-समझकर लिया गया, व्यक्तिगत निर्णय होता है, जो विस्तृत परामर्श के बाद आपके डॉक्टर के साथ मिलकर लिया जाता है, और हर कदम पर पूरा सहयोग दिया जाता है।</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RESOURCES -->
+  <section class="section">
+    <div class="resources">
+      <h2>Watch &amp; learn more</h2>
+      <p>Short, easy-to-follow videos and patient experiences to help you feel prepared and reassured.</p>
+      <div class="res-btns">
+        <!-- REPLACE href="#" below with the Maatri AI YouTube channel/playlist link -->
+        <a href="#" target="_blank" rel="noopener noreferrer" class="res-btn res-yt">
+          <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.5 15.5v-7l6.3 3.5-6.3 3.5z"/></svg>
+          Watch videos on Maatri AI
+        </a>
+        <!-- REPLACE href="#" below with the Google Reviews link -->
+        <a href="#" target="_blank" rel="noopener noreferrer" class="res-btn res-gr">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.7L12 17.3 5.8 20.8l1.6-6.7L2.2 8.9l6.9-.6L12 2z"/></svg>
+          Read patient reviews
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <div class="closing">
+    <p>This page is for general information only and does not replace personal medical advice. Please discuss your own pregnancy and any concerns directly with Dr. Manupriya.</p>
+    <p class="hi">यह पृष्ठ केवल सामान्य जानकारी के लिए है और व्यक्तिगत चिकित्सा सलाह का विकल्प नहीं है। कृपया अपनी गर्भावस्था और किसी भी चिंता के बारे में डॉ. मनुप्रिया से सीधे बात करें।</p>
+  </div>
+
+</div>
+
+<footer>
+  <div class="flogo">manupriya<span>.me</span></div>
+  <div class="fcopy">© 2026 Dr. Manupriya Madhavan · Apollo Sage Hospital, Bhopal</div>
+  <a href="/" class="fback">← Back to home</a>
+</footer>
+
+</body>
+</html>
