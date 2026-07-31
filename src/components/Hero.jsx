@@ -29,12 +29,13 @@ export default function Hero() {
           <span className={`${styles.tag} ${styles.tagSage}`}>Apollo Sage Hospital</span>
         </div>
         <div className={styles.btns}>
-          <button className={styles.btnPrimary} onClick={() => scrollTo('contact')}>
-            Book Consultation
-          </button>
+          <a href="/book" className={styles.btnPrimary}>Book Video Consultation</a>
           <button className={styles.btnOutline} onClick={() => scrollTo('apps')}>
             Explore My Work
           </button>
+          <a href="/patient-info" className={styles.btnGuide}>
+            Scans &amp; Tests Guide
+          </a>
         </div>
       </div>
 

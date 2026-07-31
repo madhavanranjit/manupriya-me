@@ -73,7 +73,7 @@
   letter-spacing: 0.03em;
 }
 
-.tagSage { background: #DDE9E4; color: var(--sage-deep); }
+.tagSage { background: #D4E8E5; color: var(--sage-deep); }
 .tagRose { background: var(--rose-light); color: #8B4A35; }
 .tagWarm { background: #EDE5DB; color: var(--warm-brown); }
 
@@ -97,7 +97,7 @@
 }
 
 .btnPrimary:hover {
-  background: #2e5040;
+  background: #245C58;
   transform: translateY(-2px);
 }
 
@@ -115,7 +115,7 @@
 }
 
 .btnOutline:hover {
-  background: #DDE9E4;
+  background: #D4E8E5;
   transform: translateY(-2px);
 }
 
@@ -232,3 +232,10 @@
   .btns { flex-direction: column; }
   .btnPrimary, .btnOutline { text-align: center; }
 }
+
+.btnGuide { background:var(--dusty-rose); color:#fff; padding:14px 32px; font-size:12.5px; letter-spacing:.08em; text-transform:uppercase; border:none; border-radius:2px; font-weight:500; text-decoration:none; display:inline-flex; align-items:center; transition:background .2s,transform .15s; animation:guidePulse 2.6s ease-in-out infinite; }
+.btnGuide:hover { background:#b5745c; transform:translateY(-2px); }
+@keyframes guidePulse { 0%,100%{box-shadow:0 0 0 0 rgba(196,136,111,.5);} 50%{box-shadow:0 0 0 10px rgba(196,136,111,0);} }
+@media (prefers-reduced-motion:reduce){ .btnGuide{animation:none;} }
+
+.name, .name em { color: #A8564A; }

@@ -32,7 +32,7 @@
 }
 
 .header_maatri {
-  background: linear-gradient(135deg, #DDE9E4, #C8DDD0);
+  background: linear-gradient(135deg, #D4E8E5, #D9EBE8);
 }
 
 .header_defe {
@@ -122,7 +122,7 @@
   letter-spacing: 0.04em;
 }
 
-.pillSage { background: #DDE9E4; color: var(--sage-deep); }
+.pillSage { background: #D4E8E5; color: var(--sage-deep); }
 .pillRose { background: var(--rose-light); color: #8B4A35; }
 
 .storeLink {
