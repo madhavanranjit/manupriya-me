@@ -61,6 +61,7 @@ export default function Contact() {
               <span>@ManupriyaMD</span>
             </div>
           </div>
+          <div className={styles.qrBox}><img src="/review-qr.png" alt="Scan to leave a Google review" className={styles.qrImg} /><span>Scan to share your feedback</span></div>
         </div>
 
         <div className={`${styles.right} reveal`} style={{ transitionDelay: '0.15s' }}>

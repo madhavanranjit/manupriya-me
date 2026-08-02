@@ -29,6 +29,7 @@ export default function Navbar() {
         <a href="/gallery" className={styles.navLink}>Gallery</a>
         <a href="/maatriai" className={styles.navLink}>MaatriAI</a>
         <button onClick={() => scrollTo('contact')}>Contact</button>
+        <a href="https://share.google/qbYX6HPzK5OyHpIo7" target="_blank" rel="noopener noreferrer" className={styles.navHighlight}>Feedback</a>
       </div>
 
       <a href="/book" className={styles.cta}>

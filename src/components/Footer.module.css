@@ -47,3 +47,7 @@
   .footer { padding: 24px; }
   .inner { flex-direction: column; align-items: flex-start; gap: 12px; }
 }
+
+.reviewBtn { display:inline-flex; align-items:center; gap:7px; font-size:12.5px; font-weight:500; color:#1A2B21; background:var(--dusty-rose); padding:9px 18px; border-radius:100px; transition:background .2s, transform .15s; }
+.reviewBtn:hover { background:#d49a82; transform:translateY(-1px); }
+.reviewBtn i { font-size:15px; }

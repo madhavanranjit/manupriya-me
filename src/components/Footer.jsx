@@ -6,6 +6,7 @@ export default function Footer() {
       <div className={styles.inner}>
         <div className={styles.logo}>manupriya<span>.me</span></div>
         <p className={styles.copy}>© 2026 Dr. Manupriya Madhavan · Apollo Sage Hospital, Bhopal</p>
+        <a href="https://share.google/qbYX6HPzK5OyHpIo7" target="_blank" rel="noopener noreferrer" className={styles.reviewBtn}><i className="ti ti-star-filled" aria-hidden="true" /> Leave a Google Review</a>
         <div className={styles.links}>
           <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
             <i className="ti ti-brand-linkedin" aria-hidden="true" /> LinkedIn
