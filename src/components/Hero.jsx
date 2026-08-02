@@ -40,6 +40,8 @@ export default function Hero() {
           <span>·</span>
           <a href="#" target="_blank" rel="noopener noreferrer">Watch Videos</a>
           <span>·</span>
+          <a href="/case-scenarios">Case Scenarios</a>
+          <span>·</span>
           <a href="/patient-info">Scans &amp; Tests Guide</a>
         </div>
       </div>
