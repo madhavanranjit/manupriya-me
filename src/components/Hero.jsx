@@ -1,11 +1,10 @@
 import styles from './Hero.module.css'
 import heroPhoto from '../assets/hero-photo.jpg'
 
-export default function Hero() {
-  const scrollTo = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
-  }
+const APOLLO_URL =
+  'https://www.apollohospitals.com/doctors/obstetrician-and-gynecologist/bhopal/dr-manupriya-madhavan?utm_campaign=rightchoice-google-reserve&utm_source=google-reserve&utm_medium=1931525415121178175&rwg_token=AFd1xnGVp8-AHEpiFSNvALoCsn8M7kbYC1CfBxUHip0uq4DpAtZjQLIi_fCKBS1lMZKfRL8hzBRBU9p8zfO9rZMf2MeGN7h6jA%3D%3D'
 
+export default function Hero() {
   return (
     <section className={styles.hero}>
       <div className={styles.left}>
@@ -29,13 +28,19 @@ export default function Hero() {
           <span className={`${styles.tag} ${styles.tagSage}`}>Apollo Sage Hospital</span>
         </div>
         <div className={styles.btns}>
-          <a href="/book" className={styles.btnPrimary}>Book Video Consultation</a>
-          <button className={styles.btnOutline} onClick={() => scrollTo('apps')}>
-            Explore My Work
-          </button>
-          <a href="/patient-info" className={styles.btnGuide}>
-            Scans &amp; Tests Guide
+          <a href="/book" className={styles.btnPrimary}>
+            Book Online Consultation
           </a>
+          <a href={APOLLO_URL} target="_blank" rel="noopener noreferrer" className={styles.btnOutline}>
+            Book Clinic Consultation
+          </a>
+        </div>
+        <div className={styles.btnLinks}>
+          <a href="/gallery">View Gallery</a>
+          <span>·</span>
+          <a href="#" target="_blank" rel="noopener noreferrer">Watch Videos</a>
+          <span>·</span>
+          <a href="/patient-info">Scans &amp; Tests Guide</a>
         </div>
       </div>
 

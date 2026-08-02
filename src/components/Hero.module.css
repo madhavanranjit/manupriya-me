@@ -239,3 +239,11 @@
 @media (prefers-reduced-motion:reduce){ .btnGuide{animation:none;} }
 
 .name, .name em { color: #A8564A; }
+
+.btnLinks { display:flex; align-items:center; gap:14px; margin-top:18px; flex-wrap:wrap; }
+.btnLinks a { font-size:13.5px; color:var(--sage-deep); border-bottom:1px solid transparent; transition:border-color .2s; }
+.btnLinks a:hover { border-color:var(--sage); }
+.btnLinks span { color:var(--muted); font-size:12px; }
+
+.btnPrimary { background: var(--dusty-rose); }
+.btnPrimary:hover { background: #a86f57; }
