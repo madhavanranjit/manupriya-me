@@ -38,7 +38,7 @@ export default function Hero() {
         <div className={styles.btnLinks}>
           <a href="/gallery">View Gallery</a>
           <span>·</span>
-          <a href="#" target="_blank" rel="noopener noreferrer">Watch Videos</a>
+          <a href="https://youtube.com/@DrManupriyaFetalMedicine" target="_blank" rel="noopener noreferrer">Watch Videos</a>
           <span>·</span>
           <a href="/case-scenarios">Case Scenarios</a>
           <span>·</span>
