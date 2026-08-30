@@ -58,7 +58,7 @@ export default function Contact() {
             </div>
             <div className={styles.infoItem}>
               <i className="ti ti-brand-instagram" aria-hidden="true" />
-              <span>@ManupriyaMD</span>
+              <span><a href="https://instagram.com/DrManupriyaFetalMedicine" target="_blank" rel="noopener noreferrer">@DrManupriyaFetalMedicine</a></span>
             </div>
           </div>
           <div className={styles.qrBox}><img src="/review-qr.png" alt="Scan to leave a Google review" className={styles.qrImg} /><span>Scan to share your feedback</span></div>

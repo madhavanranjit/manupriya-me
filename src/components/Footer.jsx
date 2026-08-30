@@ -11,11 +11,14 @@ export default function Footer() {
           <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
             <i className="ti ti-brand-linkedin" aria-hidden="true" /> LinkedIn
           </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://instagram.com/DrManupriyaFetalMedicine" target="_blank" rel="noopener noreferrer">
             <i className="ti ti-brand-instagram" aria-hidden="true" /> Instagram
           </a>
           <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
             <i className="ti ti-brand-twitter" aria-hidden="true" /> Twitter
+          </a>
+          <a href="https://youtube.com/@DrManupriyaFetalMedicine" target="_blank" rel="noopener noreferrer">
+            <i className="ti ti-brand-youtube" aria-hidden="true" /> YouTube
           </a>
         </div>
       </div>

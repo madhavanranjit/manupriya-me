@@ -26,7 +26,6 @@ export default function Navbar() {
         <button onClick={() => scrollTo('about')}>About</button>
         <button onClick={() => scrollTo('expertise')}>Expertise</button>
         <a href="/patient-info" className={styles.navHighlight}>Patient Info</a>
-        <a href="/gallery" className={styles.navLink}>Gallery</a>
         <a href="/maatriai" className={styles.navLink}>MaatriAI</a>
         <button onClick={() => scrollTo('contact')}>Contact</button>
         <a href="https://share.google/qbYX6HPzK5OyHpIo7" target="_blank" rel="noopener noreferrer" className={styles.navHighlight}>Feedback</a>
