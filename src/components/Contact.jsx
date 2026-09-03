@@ -61,7 +61,7 @@ export default function Contact() {
               <span><a href="https://instagram.com/DrManupriyaFetalMedicine" target="_blank" rel="noopener noreferrer">@DrManupriyaFetalMedicine</a></span>
             </div>
           </div>
-          <div className={styles.qrBox}><img src="/review-qr.png" alt="Scan to leave a Google review" className={styles.qrImg} /><span>Scan to share your feedback</span></div>
+          <div className={styles.qrBox}><a href="https://drmanupriya.com"><img src="/review-qr.png" alt="Scan to visit our website" className={styles.qrImg} /></a><span>Scan to visit our website</span></div>
         </div>
 
         <div className={`${styles.right} reveal`} style={{ transitionDelay: '0.15s' }}>
